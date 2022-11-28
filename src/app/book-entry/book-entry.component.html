@@ -8,42 +8,42 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Title</label>
-                    <input type="text" class="form-control">
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Author</label>
-                    <input type="text" class="form-control">
+                    <input name="author" [(ngModel)]="author" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Description</label>
-                    <input type="text" class="form-control">
+                    <input name="descrption" [(ngModel)]="descrption" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Publisher</label>
-                    <input type="text" class="form-control">
+                    <input name="publi" [(ngModel)]="author" type="publi" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Language</label>
-                    <input type="text" class="form-control">
+                    <input name="Language" [(ngModel)]="Language" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Distributor</label>
-                    <input type="text" class="form-control">
+                    <input name="distr" [(ngModel)]="distr" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Release Year</label>
-                    <input type="text" class="form-control">
+                    <input name="relyear" [(ngModel)]="relyear" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Price</label>
-                    <input type="text" class="form-control">
+                    <input name="Price" [(ngModel)]="Price" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Image</label>
-                    <input type="file" name="" id="" class="form-control">
+                    <input name="image" [(ngModel)]="image" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-secondary">Add</button>
+                    <button (click)="readValue()" class="btn btn-secondary">Add</button>
                 </div>
             </div>
         </div>

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class BookDeleteComponent {
 
+  name=""
+
+delete=()=>
+{
+  let data:any=
+  {
+    name:this.name
+  }
+  console.log(data)
+}
+
+
 }

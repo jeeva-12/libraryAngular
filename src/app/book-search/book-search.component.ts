@@ -5,6 +5,17 @@ import { Component } from '@angular/core';
   templateUrl: './book-search.component.html',
   styleUrls: ['./book-search.component.css']
 })
-export class BookSearchComponent {
+export class BookSearchComponent { 
+
+  title=""
+
+  search=()=>
+  {
+    let data:any=
+    {
+      title:this.title
+    }
+    console.log(data)
+  }
 
 }

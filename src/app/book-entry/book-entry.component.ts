@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-book-entry',
@@ -8,34 +9,56 @@ import { Component } from '@angular/core';
 export class BookEntryComponent {
 
   image=""
-  name=""
+  title=""
   author=""
-  Language=""
-  Price=""
-  descrption=""
-  distr=""
-  publi=""
-  relyear=""
-
+  language=""
+  releasedyear=""
+  description=""
+  distributer=""
+  publisher=""
+  price=""
+constructor(private api:ApiService){}
   readValue=()=>
   {
     let data:any=
     {
       "image":this.image,
-      "name":this.name,
+      "name":this.title,
       "author":this.author,
-      "Language":this.Language,
-      "Price":this.Price,
-      "descrption":this.descrption,
-      "distr":this.distr,
-      "publi":this.publi,
-      "relyear":this.relyear
+      "Language":this.language,
+      "price":this.price,
+      "descrption":this.description,
+      "distr":this.distributer,
+      "publi":this.publisher,
+      "relyear":this.releasedyear
 
     }
 
     console.log(data)
+    this.api.addbook(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if (response.status=="success"){
+          this.title=""
+          this.image=""
+          this.author=""
+          this.description=""
+          this.publisher=""
+          this.language=""
+          this.distributer=""
+          this.releasedyear=""
+          this.price=""
+        } else{
+          alert("something went wrong")
+
+        }
+        
+      }
+    )
+  }
+
 
   }
 
 
-}
+

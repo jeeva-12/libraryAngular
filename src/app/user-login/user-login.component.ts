@@ -18,6 +18,9 @@ export class UserLoginComponent {
   password:this.password
     }
     console.log(data)
+
+
+    
   }
 
 }
